@@ -14,6 +14,12 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
     public static int LINE_MAX = 1024;
 
     @Override
+    public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("Client disconnected.");
+        super.channelUnregistered(ctx);
+    }
+
+    @Override
     public void channelRead(ChannelHandlerContext ctx, Object linebuf) throws Exception {
         byte[] bytes = new byte[((ByteBuf) linebuf).readableBytes()];
 
