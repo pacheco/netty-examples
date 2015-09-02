@@ -1,4 +1,4 @@
-package com.lepacheco.nettyexamples;
+package com.lepacheco.nettyexamples.echo;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -11,7 +11,6 @@ import io.netty.handler.codec.LineBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 import io.netty.util.CharsetUtil;
-import io.netty.util.concurrent.GenericFutureListener;
 
 /**
  * Created by pacheco on 8/31/15.

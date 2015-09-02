@@ -1,2 +1,2 @@
 # netty-examples
-Some example code using Netty
+Just playing around with Netty. Check `io.netty.example.*` for official examples.

@@ -1,4 +1,4 @@
-package com.lepacheco.nettyexamples;
+package com.lepacheco.nettyexamples.echo;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;

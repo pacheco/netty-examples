@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mvn -q exec:java -Dexec.mainClass="com.lepacheco.nettyexamples.DiscardServer" -Dexec.args="$@"
+mvn -q exec:java -Dexec.mainClass="com.lepacheco.nettyexamples.discard.DiscardServer" -Dexec.args="$@"
