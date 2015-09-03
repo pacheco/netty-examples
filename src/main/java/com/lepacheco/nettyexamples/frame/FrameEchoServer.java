@@ -16,6 +16,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.SimpleLayout;
 
 /**
+ * Echo server that echoes back whatever "messages" it receives. The server expects length prepended messages
  * Created by pacheco on 8/31/15.
  */
 public class FrameEchoServer {
