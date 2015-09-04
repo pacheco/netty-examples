@@ -1,7 +1,5 @@
 package com.lepacheco.nettyexamples;
 
-import java.nio.ByteBuffer;
-
 /**
  * Hello world!
  *
