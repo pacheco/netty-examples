@@ -22,17 +22,12 @@ public class FrameEchoServerHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object linebuf) throws Exception {
         byte[] bytes = new byte[((ByteBuf) linebuf).readableBytes()];
 
-        String line = ((ByteBuf) linebuf).toString(Charset.defaultCharset());
-        line = line.trim();
-        if (line.length() == 0) {
-            ((ByteBuf) linebuf).release();
-            ctx.channel().close();
-        } else {
-            System.out.println("Got msg: " + line);
-            // reuse the ByteBuf, no need to release as it is released on writing to wire
-            ctx.write(linebuf);
-            // force write
-            ctx.flush();
-        }
+//        String line = ((ByteBuf) linebuf).toString(Charset.defaultCharset());
+//        line = line.trim();
+//        System.out.println("Got msg of size " + line.length() + ": " + line);
+        // reuse the ByteBuf, no need to release as it is released on writing to wire
+        ctx.write(linebuf);
+        // force write
+        ctx.flush();
     }
 }
